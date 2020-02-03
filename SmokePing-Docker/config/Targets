@@ -1,0 +1,54 @@
+*** Targets ***
+probe = FPing
+menu = Top
+title = Network Latency Grapher
+
++ network
+menu = Net latency
+title = Network latency (ICMP pings)
+
+++ server
+menu = ICMP latency
+title = ICMP latency
+
++++ ip
+host = 8.8.8.8
+
++++ host1
+host = www.google.com.tw
+
++++ host2
+host = www.google.com
+
++ services
+menu = Service latency
+title = Service latency (DNS, HTTP)
+
+++ DNS
+probe = DNS
+menu = DNS Latency
+title = DNS Latency
+
++++ host1
+host = www.google.com.tw
+lookup = www.google.com.tw
+pings = 5
+server = 1.1.1.1
+
++++ host2
+host = www.google.com
+lookup = www.google.com
+pings = 5
+server = 1.1.1.1
+
+++ HTTP
+probe = Curl
+menu = HTTP Latency
+title = HTTP Latency
+
++++ host1
+host = www.google.com.tw
+
++++ host2
+host = www.google.com
+

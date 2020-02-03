@@ -1,0 +1,17 @@
+*** Probes ***
++ FPing
+binary = /usr/sbin/fping
+packetsize = 1000
+step = 60
+
++ DNS
+binary = /usr/bin/dig
+pings = 5
+step = 30
+
++ Curl
+binary = /usr/bin/curl
+forks = 2
+step = 60
+timeout = 10
+urlformat = https://%host%/
