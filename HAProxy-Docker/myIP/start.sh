@@ -5,6 +5,7 @@ docker	run	-itd \
 		--name=test \
 		--restart=unless-stopped \
 		-v "$(pwd)"/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg \
-		-v "$(pwd)"/star.gametower.com.tw.pem:/usr/local/etc/haproxy/star.gametower.com.tw.pem \
+		-v "$(pwd)"/mycert.pem:/usr/local/etc/haproxy/mycert.pem \
 		-v "$(pwd)/../errors/:/usr/local/etc/haproxy/errors/" \
+		-v "$(pwd)"/dhparam:/usr/local/etc/haproxy/dhparam \
 		haproxy:latest
